@@ -6,5 +6,14 @@
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare"
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["ChatRoomObject"]
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "class_name": "ChatRoomObject", "name": "CHAT_ROOMS" }]
   }
 }
